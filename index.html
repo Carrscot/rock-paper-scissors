@@ -10,8 +10,13 @@
     
 <script>
 
+const choiceArray = ['Rock', 'Paper', 'Scissors']
 
+function getComputerChoice(){
+    const computerSelection = choiceArray[Math.floor(Math.random()*choiceArray.length)]; 
+    return computerSelection
     
+}
 </script>
 
 </body>
