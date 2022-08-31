@@ -14,3 +14,10 @@ Create html biolerplate. Plan with pseudocode step by step:
 	-computer slection = const from getComputerChoice function
 	-if...else if statements to compare options. boolean comparisons. 
 	-RETURN (not console.log) string based on result i.e 'You lose! x beats Y'
+
+rock = rock
+scissors = scissors
+paper = paper
+rock > scissors
+rock < paper
+scissors > paper

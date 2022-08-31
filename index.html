@@ -10,22 +10,49 @@
     
 <script>
 
-const choiceArray = ['rock', 'paper', 'scissors']
-const playerInput = prompt('Rock, Paper, Scissors?')
-const playerSelection = playerInput.toLowerCase()
+const choiceArray = ['rock', 'paper', 'scissors'];
+const playerInput = prompt('Rock, Paper, Scissors?');
+const playerSelection = playerInput.toLowerCase();
 
-const win = 'Congratulations, you win!'
-const draw = 'You both chose the same, you draw!'
+const draw = 'You both chose the same, you draw!';
 function getComputerChoice(){
     const randomSelection = choiceArray[Math.floor(Math.random()*choiceArray.length)]; 
     return randomSelection;
 }
 
 function playRound(){
-    const computerSelection = getComputerChoice()
+    const computerSelection = getComputerChoice();
 
-    if ( playerSelection === computerSelection) {
-        return draw
+    switch (true) { 
+        case playerSelection === computerSelection:
+            return draw;
+            break;
+        
+        case playerSelection === 'rock' && computerSelection === 'scissors':
+            return 'Rock beats Paper. You win!';
+            break;
+
+        case playerSelection === 'rock' && computerSelection === 'paper':
+            return 'Paper beats Rock! Unlucky, try again.';
+            break;
+        
+        case playerSelection === 'scissors' && computerSelection === 'paper':
+            return 'Scissors beats Paper. You win!';
+            break;
+            
+        case playerSelection === 'scissors' && computerSelection === 'rock':
+            return 'Rock beats Scissors. Unlucky, try again.';
+            break;
+
+        case playerSelection === 'paper' && computerSelection === 'rock':
+            return 'Paper beats Rock. You win!';
+            break;
+            
+        case playerSelection === 'paper' && computerSelection === 'scissors':
+            return 'Scissors beats Paper. Unlucky try again';
+            break;  
+
+        default: return 'You did not make a selection'
     }   
 
 }
