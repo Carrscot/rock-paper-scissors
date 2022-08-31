@@ -10,12 +10,24 @@
     
 <script>
 
-const choiceArray = ['Rock', 'Paper', 'Scissors']
+const choiceArray = ['rock', 'paper', 'scissors']
+const playerInput = prompt('Rock, Paper, Scissors?')
+const playerSelection = playerInput.toLowerCase()
 
+const win = 'Congratulations, you win!'
+const draw = 'You both chose the same, you draw!'
 function getComputerChoice(){
-    const computerSelection = choiceArray[Math.floor(Math.random()*choiceArray.length)]; 
-    return computerSelection
-    
+    const randomSelection = choiceArray[Math.floor(Math.random()*choiceArray.length)]; 
+    return randomSelection;
+}
+
+function playRound(){
+    const computerSelection = getComputerChoice()
+
+    if ( playerSelection === computerSelection) {
+        return draw
+    }   
+
 }
 </script>
 
