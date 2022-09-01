@@ -15,6 +15,8 @@ Create html biolerplate. Plan with pseudocode step by step:
 	-if...else if statements to compare options. boolean comparisons. 
 	-RETURN (not console.log) string based on result i.e 'You lose! x beats Y'
 
+3. Create Loop = 
+
 rock = rock
 scissors = scissors
 paper = paper
