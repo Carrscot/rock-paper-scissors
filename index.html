@@ -69,8 +69,6 @@ function playRound(){
 
 }
 
-
-
 function game(){
     for (let i = 0; i < 5; i++){
     console.log(playRound()); 
@@ -78,6 +76,22 @@ function game(){
     console.log('Computer Score = ', compScore, '/5');
     
     }
+
+    if (playerScore > compScore) {
+        console.log('Congratulations! You win!')
+        }
+
+    else if (playerScore < compScore) {
+        console.log('You lose. Try again.')
+        }
+
+    else if (playerScore === compScore) {
+        console.log('You lose. Try again.')
+        }
+
+    else {
+        console.log('Something went wrong.')
+        }
 
 }
 
