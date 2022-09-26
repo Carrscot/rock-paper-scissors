@@ -28,3 +28,13 @@ paper = paper
 rock > scissors
 rock < paper
 scissors > paper
+
+UI construction:
+
+1. Create separate CSS and javascript files, move all script in HTML into script.js and link scrip.js and style.css into html file.
+
+2. Create a button for each selection that calls playRound function when clicked.
+
+3. Create an element that displays the result of each round.
+
+4. Make function to calculate winner and display win or loss messages.
