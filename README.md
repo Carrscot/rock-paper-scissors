@@ -31,7 +31,7 @@ scissors > paper
 
 UI construction:
 
-1. Create separate CSS and javascript files, move all script in HTML into script.js and link scrip.js and style.css into html file.
+1. (Done) Create separate CSS and javascript files, move all script in HTML into script.js and link scrip.js and style.css into html file.
 
 2. Create a button for each selection that calls playRound function when clicked.
 

@@ -1,3 +1,5 @@
+// Game scripting
+
 const choiceArray = ['rock', 'paper', 'scissors'];
 let playerScore = 0;
 let compScore = 0;
@@ -82,3 +84,30 @@ function game(){
         }
 
 }
+
+// Element Scripting
+const container = document.querySelector('#container')
+
+
+const buttons = document.createElement('div');
+buttons.classList.add('buttons');
+
+container.appendChild(buttons);
+
+const rock = document.createElement('button');
+rock.classList.add('buttonClick');
+rock.textContent = 'Rock';
+
+buttons.appendChild(rock);
+
+const paper = document.createElement('button');
+paper.classList.add('buttonClick');
+paper.textContent = 'Paper';
+
+buttons.appendChild(paper);
+
+const scissors = document.createElement('button');
+scissors.classList.add('buttonClick');
+scissors.textContent = 'Scissors';
+
+buttons.appendChild(scissors);
