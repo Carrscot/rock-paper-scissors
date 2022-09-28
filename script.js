@@ -25,12 +25,25 @@ scissors.textContent = 'Scissors';
 
 buttons.appendChild(scissors);
 
+let playerClick
+let playerInput
+
 const buttonClick = document.querySelectorAll('button');
-buttonClick.forEach((button) => {
-    button.addEventListener('click', () => {
-        alert(button.className);
-    })
-})
+
+buttonClick.forEach((button) => {button.addEventListener('click', ()=>{
+
+    playerClick = button.className;
+    if (playerClick == 'rock'){
+        playerInput = 'rock'
+    }
+    else if (playerClick == 'paper'){
+        playerInput = 'rock'
+    }
+    else if (playerClick == 'scissors'){
+        playerInput = 'scissors'
+    }
+}
+)})
 
     
 // Game scripting
@@ -81,7 +94,7 @@ function playRound(){
 
         case playerSelection === 'paper' && computerSelection === 'rock':
             playerScore++;
-            rconsole.log('Paper beats Rock. You win!');
+            console.log('Paper beats Rock. You win!');
             break;
             
         case playerSelection === 'paper' && computerSelection === 'scissors':
