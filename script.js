@@ -120,8 +120,8 @@ function playRound(){
         default: winState.textContent = 'Make your selection';
     }   
 
-        score.textContent = 'Player Score = , playerScore, /5'
-        score.textContent = 'Computer Score = , compScore, /5'
+        score.textContent = `Player Score =  ${playerScore} /5  Computer Score =  ${compScore} /5`
+        
 
 }
 
@@ -148,28 +148,27 @@ clickRound.forEach((button) => {
 
 
 
-//function game(){
-//    for (let i = 0; i < 5; i++){
-//    console.log(playRound()); 
-//    console.log('Player Score = ', playerScore, '/5');
-//    console.log('Computer Score = ', compScore, '/5');
+
+    //for (let i = 0; i < 5; i++){
+    //console.log(playRound()); 
+    //console.log('Player Score = ', playerScore, '/5');
+    //console.log('Computer Score = ', compScore, '/5');
     
-//    }
+    //}
 
-//    if (playerScore > compScore) {
-//        console.log('Congratulations! You win!')
-//        }
+    //if (playerScore > compScore) {
+    //    console.log('Congratulations! You win!')
+    //    }
 
-//    else if (playerScore < compScore) {
-//        console.log('You lose. Try again?')
-//        }
+   //else if (playerScore < compScore) {
+   //     console.log('You lose. Try again?')
+    //    }
 
-//    else if (playerScore === compScore) {
-//        console.log('It\'s a draw. Try again?')
-//        }
+   //else if (playerScore === compScore) {
+    //   console.log('It\'s a draw. Try again?')
+   //     }
 
-//    else {
-//        console.log('Something went wrong.')
-//        }
+    //else {
+    //    console.log('Something went wrong.')
+    //    }
 
-//}
