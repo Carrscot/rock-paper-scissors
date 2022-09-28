@@ -42,6 +42,11 @@ score.classList.add('score');
 
 feedback.appendChild(score);
 
+const finalResult = document.createElement('div');
+finalResult.classList.add('final');
+
+feedback.appendChild(finalResult)
+
 let playerClick
 let playerInput
 
@@ -123,6 +128,25 @@ function playRound(){
         score.textContent = `Player Score =  ${playerScore} /5  Computer Score =  ${compScore} /5`
         
 
+        switch (true){
+            case playerScore === 0 && compScore === 0 :
+                finalResult.textContent = '';
+                break;
+            
+            case playerScore === 5 :
+               finalResult.textContent = 'Congratulations! You win!';
+                break;
+            
+            case compScore === 5 :
+                finalResult.textContent = 'You lose. Try again?';
+                break;
+            
+            case playerScore === 5 && compScore === 5 :
+                finalResult.textContent = 'It\'s a draw. Try again?';
+                break;
+            
+            default: finalResult.textContent = 'The game continues...';
+            }
 }
 
 
@@ -133,42 +157,4 @@ clickRound.forEach((button) => {
    button.addEventListener('click', playRound
    )})
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //for (let i = 0; i < 5; i++){
-    //console.log(playRound()); 
-    //console.log('Player Score = ', playerScore, '/5');
-    //console.log('Computer Score = ', compScore, '/5');
-    
-    //}
-
-    //if (playerScore > compScore) {
-    //    console.log('Congratulations! You win!')
-    //    }
-
-   //else if (playerScore < compScore) {
-   //     console.log('You lose. Try again?')
-    //    }
-
-   //else if (playerScore === compScore) {
-    //   console.log('It\'s a draw. Try again?')
-   //     }
-
-    //else {
-    //    console.log('Something went wrong.')
-    //    }
 
