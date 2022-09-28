@@ -25,6 +25,23 @@ scissors.textContent = 'Scissors';
 
 buttons.appendChild(scissors);
 
+const feedback = document.createElement('div');
+feedback.classList.add('feedback');
+
+container.appendChild(feedback);
+
+
+const winState = document.createElement('div');
+winState.classList.add('winState');
+
+feedback.appendChild(winState);
+
+
+const score = document.createElement('div');
+score.classList.add('score');
+
+feedback.appendChild(score);
+
 let playerClick
 let playerInput
 
@@ -62,48 +79,49 @@ function getComputerChoice(){
 function playRound(){
     const computerSelection = getComputerChoice();
     const playerSelection = playerInput;
-  
-
-
+    
     switch (true) { 
         case playerSelection === computerSelection:
             playerScore++;
             compScore++;
-            console.log('You both chose the same, you draw!');
+            winState.textContent ='You both chose the same, you draw!';
             break;
         
         case playerSelection === 'rock' && computerSelection === 'scissors':
             playerScore++;
-            console.log('Rock beats Scissors. You win!');
+            winState.textContent = 'Rock beats Scissors. You win!';
             break;
 
         case playerSelection === 'rock' && computerSelection === 'paper':
             compScore++;
-            console.log('Paper beats Rock! Unlucky, try again.');
+            winState.textContent = 'Paper beats Rock! Unlucky, try again.';
             break;
         
         case playerSelection === 'scissors' && computerSelection === 'paper':
-            playerScore++;    
-            console.log('Scissors beats Paper. You win!');
+            playerScore++; 
+            winState.textContent = 'Scissors beats Paper. You win!';
             break;
             
         case playerSelection === 'scissors' && computerSelection === 'rock':
             compScore++;
-            console.log('Rock beats Scissors. Unlucky, try again.');
+            winState.textContent = 'Rock beats Scissors. Unlucky, try again.';
             break;
 
         case playerSelection === 'paper' && computerSelection === 'rock':
             playerScore++;
-            console.log('Paper beats Rock. You win!');
+            winState.textContent = 'Paper beats Rock. You win!';
             break;
             
         case playerSelection === 'paper' && computerSelection === 'scissors':
             compScore++;
-            console.log('Scissors beats Paper. Unlucky try again');
+            winState.textContent = 'Scissors beats Paper. Unlucky try again';
             break;  
 
-        default: console.log('Make your selection')
+        default: winState.textContent = 'Make your selection';
     }   
+
+        score.textContent = 'Player Score = , playerScore, /5'
+        score.textContent = 'Computer Score = , compScore, /5'
 
 }
 
