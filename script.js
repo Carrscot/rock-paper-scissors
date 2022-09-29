@@ -151,11 +151,11 @@ function playRound(){
                 finalResult.textContent = '';
                 break;
             
-            case playerScore === 5 :
+            case playerScore === 5 && compScore != 5:
                finalResult.textContent = 'Congratulations! You win!';
                 break;
             
-            case compScore === 5 :
+            case compScore === 5 && playerScore !=5 :
                 finalResult.textContent = 'You lose. Try again?';
                 break;
             
