@@ -67,7 +67,9 @@ restart.appendChild(endButton);
 //Game scripting
 
 function startGame (){
-    score.textContent = `Player Score =  0/5  Computer Score =  0/5`
+    playerScore = 0;
+    compScore = 0;
+    score.textContent = 'Player Score =  0/5  Computer Score =  0/5';
     winState.textContent = 'Make your selection';
     finalResult.textContent = 'The game begins!';
 }
