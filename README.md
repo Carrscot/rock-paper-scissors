@@ -33,8 +33,12 @@ UI construction:
 
 1. (Done) Create separate CSS and javascript files, move all script in HTML into script.js and link scrip.js and style.css into html file.
 
-2. Create a button for each selection that calls playRound function when clicked.
+2. (Done) Create a button for each selection that calls playRound function when clicked.
 
-3. Create an element that displays the result of each round.
+3. (Done) Create an element that displays the result of each round.
 
-4. Make function to calculate winner and display win or loss messages.
+4. (Done) Make function to calculate winner and display win or loss messages.
+
+5. finalise - Display score from the begining as well as prompt message where win/loss states are.
+	    - Make 5 round maximum
+	    - Add styling

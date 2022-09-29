@@ -1,3 +1,9 @@
+//Globals
+let playerClick;
+let playerInput;
+const choiceArray = ['rock', 'paper', 'scissors'];
+let playerScore = 0;
+let compScore = 0;
 // Element Scripting
 const container = document.querySelector('#container')
 
@@ -45,41 +51,51 @@ feedback.appendChild(score);
 const finalResult = document.createElement('div');
 finalResult.classList.add('final');
 
-feedback.appendChild(finalResult)
+feedback.appendChild(finalResult);
 
-let playerClick
-let playerInput
+const restart = document.createElement('div');
+restart.classList.add('restart');
+
+container.appendChild(restart);
+
+const endButton = document.createElement('button');
+endButton.classList.add('endButton');
+endButton.textContent = 'Start a new game?'
+
+restart.appendChild(endButton);
+
+//Game scripting
+
+function startGame (){
+    score.textContent = `Player Score =  0/5  Computer Score =  0/5`
+    winState.textContent = 'Make your selection';
+    finalResult.textContent = 'The game begins!';
+}
+
+const startRound = document.querySelector('.endButton');
+    endButton.addEventListener('click', startGame);
 
 const buttonClick = document.querySelectorAll('button');
 
-buttonClick.forEach((button) => {button.addEventListener('click', ()=>{
-
-    playerClick = button.className;
-    if (playerClick == 'rock'){
-        playerInput = 'rock'
-    }
-    else if (playerClick == 'paper'){
-        playerInput = 'rock'
-    }
-    else if (playerClick == 'scissors'){
-        playerInput = 'scissors'
-    }
-}
-)})
-
+    buttonClick.forEach((button) => {button.addEventListener('click', ()=>{
     
-// Game scripting
-
-const choiceArray = ['rock', 'paper', 'scissors'];
-let playerScore = 0;
-let compScore = 0;
-
-
+        playerClick = button.className;
+        if (playerClick == 'rock'){
+            playerInput = 'rock'
+        }
+        else if (playerClick == 'paper'){
+            playerInput = 'rock'
+        }
+        else if (playerClick == 'scissors'){
+            playerInput = 'scissors'
+        }
+    }
+    )})
 
 function getComputerChoice(){
     const randomSelection = choiceArray[Math.floor(Math.random()*choiceArray.length)]; 
     return randomSelection;
-}
+}   
 
 function playRound(){
     const computerSelection = getComputerChoice();
@@ -147,14 +163,18 @@ function playRound(){
             
             default: finalResult.textContent = 'The game continues...';
             }
+
+
+        if (playerScore >= 5 || compScore >= 5) {
+        playerScore = 0;
+        compScore = 0;
+        }
 }
 
+const clickRound = document.querySelector('.buttons');
+clickRound.addEventListener('click', playRound);
 
-   
 
-const clickRound = document.querySelectorAll('button');
-clickRound.forEach((button) => {
-   button.addEventListener('click', playRound
-   )})
 
+    
 
