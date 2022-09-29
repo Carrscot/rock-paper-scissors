@@ -84,7 +84,7 @@ const buttonClick = document.querySelectorAll('button');
             playerInput = 'rock'
         }
         else if (playerClick == 'paper'){
-            playerInput = 'rock'
+            playerInput = 'paper'
         }
         else if (playerClick == 'scissors'){
             playerInput = 'scissors'
